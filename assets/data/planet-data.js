@@ -23,7 +23,8 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         shortDescription: "Third planet from the Sun in the Solar System",
         type: "planet",
-        image: require('../images/earth.jpg')
+        image: require('../images/earth.jpg'),
+        arObject: 'art.scnassets/ship.scn',
     },
     {
         id: 4,
@@ -31,7 +32,8 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         shortDescription: "Fourth planet from the Sun in the Solar System",
         type: "planet",
-        image: require('../images/mars.jpg')
+        image: require('../images/mars.jpg'),
+        arObject: 'art.scnassets/ship.scn',
     },
     {
         id: 5,
@@ -39,7 +41,8 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         shortDescription: "Fifth planet from the Sun in the Solar System",
         type: "planet",
-        image: require('../images/jupiter.jpg')
+        image: require('../images/jupiter.jpg'),
+        arObject: 'art.scnassets/ship.scn',
     },
     {
         id: 6,
@@ -47,7 +50,8 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         shortDescription: "Sixth planet from the Sun in the Solar System",
         type: "planet",
-        image: require('../images/saturn.jpg')
+        image: require('../images/saturn.jpg'),
+        arObject: 'art.scnassets/ship.scn',
     },
     {
         id: 7,
@@ -55,6 +59,7 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         shortDescription: "Seventh planet from the Sun in the Solar System",
         type: "planet",
-        image: require('../images/uranus.jpg')
+        image: require('../images/uranus.jpg'),
+        arObject: 'art.scnassets/ship.scn',
     },
 ];

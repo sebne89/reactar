@@ -11,6 +11,7 @@ import PlanetScreen from './container/PlanetScreen';
 import MoonScreen from './container/MoonScreen';
 import DwarfPlanetScreen from './container/DwarfPlanetScreen';
 import CelestialDetail from "./components/CelestialDetail";
+import AugmentedView from "./components/AugmentedView";
 
 const PlanetStack = createStackNavigator({
     Planet: {
@@ -21,6 +22,9 @@ const PlanetStack = createStackNavigator({
     },
     CelestialDetail: {
         screen: CelestialDetail,
+    },
+    AugmentedView: {
+        screen: AugmentedView,
     }
 });
 
@@ -33,6 +37,9 @@ const MoonStack = createStackNavigator({
     },
     CelestialDetail: {
         screen: CelestialDetail,
+    },
+    AugmentedView: {
+        screen: AugmentedView,
     }
 });
 
@@ -45,6 +52,9 @@ const DwarfPlanetStack = createStackNavigator({
     },
     CelestialDetail: {
         screen: CelestialDetail,
+    },
+    AugmentedView: {
+        screen: AugmentedView,
     }
 });
 

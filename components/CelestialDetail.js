@@ -9,7 +9,6 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-
 class CelestialDetail extends React.Component {
 
     static navigationOptions = ({navigation}) => {
@@ -20,6 +19,7 @@ class CelestialDetail extends React.Component {
     };
 
     constructor(props) {
+
         super(props);
 
         const {id, type, name, image, shortDescription, description} = this.props.navigation.state.params;
@@ -32,16 +32,31 @@ class CelestialDetail extends React.Component {
             shortDescription: shortDescription,
             description: description,
             firstParagraph: '',
-        }
+            arHidden: true,
+        };
     }
 
     componentWillMount() {
 
         this.getFirstParagraph(this.state.name);
+        this.showAugmentedRealityButton();
 
     }
 
-    refetchCelestial(name){
+    augmentedCelestial = (item) => {
+        this.props.navigation.navigate('AugmentedView', item);
+    };
+
+    showAugmentedRealityButton() {
+
+        if (typeof this.props.navigation.state.params.arObject !== "undefined") {
+            this.setState({
+                arHidden: false,
+            })
+        }
+    }
+
+    refetchCelestial(name) {
         let uri_retry = 'https://en.wikipedia.org/api/rest_v1/page/summary/' + name + '?redirect=true';
 
         fetch(uri_retry)
@@ -76,7 +91,7 @@ class CelestialDetail extends React.Component {
                 console.log(extract);
                 console.log(description);
 
-                if (typeof description === "undefined" || typeof extract === "undefined" || description.includes('Disambiguation')){
+                if (typeof description === "undefined" || typeof extract === "undefined" || description.includes('Disambiguation')) {
                     console.log('Page not found. Retrying query with another URI, without type of the celestial object as parameter.');
                     this.refetchCelestial(name);
                 } else {
@@ -91,10 +106,13 @@ class CelestialDetail extends React.Component {
             })
     }
 
+
     render() {
 
         const {id, type, name, image, description} = this.props.navigation.state.params;
         const shortDescription = this.props.navigation.state.params.shortDescription;
+
+        console.log(this.props.navigation.state.params.arObject);
 
         return (
             <View style={styles.container}>
@@ -112,12 +130,17 @@ class CelestialDetail extends React.Component {
                             <View style={styles.descriptionCard}>
                                 <Text style={styles.whitetext}>Short Description:</Text>
                                 <Text style={styles.whitetext}>{this.state.description}</Text>
-                                <Text>{this.state.id}</Text>
                             </View>
                         </View>
-                        <TouchableOpacity style={styles.ar}>
-                            <Text style={styles.artext}>View in Augmented Reality</Text>
-                        </TouchableOpacity>
+                        {this.state.arHidden ?
+                            null:
+                            <TouchableOpacity
+                                style={styles.ar}
+                                onPress={() => this.augmentedCelestial(this.props.navigation.state.params)}
+                            >
+                                <Text style={styles.artext}>View in Augmented Reality</Text>
+                            </TouchableOpacity>
+                        }
                     </View>
                 </ScrollView>
             </View>

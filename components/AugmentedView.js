@@ -18,7 +18,8 @@ class AugmentedView extends React.Component {
 
     render() {
 
-        const {arObject} = this.props.navigation.state.params.arObject;
+        const arObject = this.props.navigation.state.params.arObject;
+        console.log(arObject);
 
         return (
             <View style={styles.container}>

@@ -10,7 +10,6 @@ import {
 
 import {data} from '../assets/data/dwarfplanet-data';
 import Celestial from "../components/Celestial";
-import LinearGradient from 'react-native-linear-gradient';
 
 class DwarfPlanetScreen extends React.Component {
 

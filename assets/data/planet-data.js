@@ -5,7 +5,8 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         shortDescription: "Smallest and closest planet to the Sun in the Solar System",
         type: "planet",
-        image: require('../images/mercury.jpg')
+        image: require('../images/mercury.jpg'),
+        arObject: 'art.scnassets/ship.scn',
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         shortDescription: "Second planet from the Sun in the Solar System",
         type: "planet",
-        image: require('../images/venus.jpg')
+        image: require('../images/venus.jpg'),
+        arObject: 'art.scnassets/ship.scn',
     },
     {
         id: 3,

@@ -112,6 +112,7 @@ class CelestialDetail extends React.Component {
                             <View style={styles.descriptionCard}>
                                 <Text style={styles.whitetext}>Short Description:</Text>
                                 <Text style={styles.whitetext}>{this.state.description}</Text>
+                                <Text>{this.state.id}</Text>
                             </View>
                         </View>
                         <TouchableOpacity style={styles.ar}>

@@ -6,7 +6,7 @@ export const data = [
         shortDescription: "Smallest and closest planet to the Sun in the Solar System",
         type: "planet",
         image: require('../images/mercury.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/mercury.scn',
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const data = [
         shortDescription: "Second planet from the Sun in the Solar System",
         type: "planet",
         image: require('../images/venus.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/venus.scn',
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const data = [
         shortDescription: "Third planet from the Sun in the Solar System",
         type: "planet",
         image: require('../images/earth.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/earth.scn',
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export const data = [
         shortDescription: "Fourth planet from the Sun in the Solar System",
         type: "planet",
         image: require('../images/mars.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/mars.scn',
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ export const data = [
         shortDescription: "Fifth planet from the Sun in the Solar System",
         type: "planet",
         image: require('../images/jupiter.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/jupiter.scn',
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ export const data = [
         shortDescription: "Sixth planet from the Sun in the Solar System",
         type: "planet",
         image: require('../images/saturn.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/saturn.scn',
     },
     {
         id: 7,
@@ -60,6 +60,6 @@ export const data = [
         shortDescription: "Seventh planet from the Sun in the Solar System",
         type: "planet",
         image: require('../images/uranus.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/uranus.scn',
     },
 ];

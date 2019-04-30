@@ -6,7 +6,7 @@ export const data = [
         shortDescription: "Earth's natural satellite",
         type: "moon",
         image: require('../images/moon.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/moon.scn',
     },
     {
         id: 10,

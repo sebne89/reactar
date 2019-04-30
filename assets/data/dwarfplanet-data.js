@@ -6,7 +6,7 @@ export const data = [
         shortDescription: "Eigthth and farthest planet from the Sun in the Solar System",
         type: "planet",
         image: require('../images/neptune.jpg'),
-        arObject: 'art.scnassets/ship.scn',
+        arObject: 'art.scnassets/neptune.scn',
     },
     {
         id: 30,

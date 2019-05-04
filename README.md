@@ -32,6 +32,10 @@ The following guidelines & demands had to be fullfilled:
 		src="preview/capture2.png">
 <img
 		width="210"
+		alt="Capture 7"
+		src="preview/capture7.png">
+<img
+		width="210"
 		alt="Capture 5"
 		src="preview/capture5.png">
 <img

@@ -12,6 +12,7 @@ import MoonScreen from './container/MoonScreen';
 import DwarfPlanetScreen from './container/DwarfPlanetScreen';
 import CelestialDetail from "./components/CelestialDetail";
 import AugmentedView from "./components/AugmentedView";
+import APOD from './components/APOD';
 
 const PlanetStack = createStackNavigator({
     Planet: {
@@ -78,6 +79,13 @@ const AppNavigator = createBottomTabNavigator({
             navigationOptions: {
                 title: 'Dwarfplanets',
                 tabBarIcon: <Icon name='md-globe'/>,
+            }
+        },
+        APOD: {
+            screen: APOD,
+            navigationOptions: {
+                title: 'APOD',
+                tabBarIcon: <Icon name='images'/>,
             }
         }
     },

@@ -6,7 +6,8 @@ import {
     Text,
     View,
     Dimensions,
-    TouchableOpacity
+    TouchableOpacity,
+    Modal
 } from 'react-native';
 
 class CelestialDetail extends React.Component {
@@ -33,6 +34,7 @@ class CelestialDetail extends React.Component {
             description: description,
             firstParagraph: '',
             arHidden: true,
+            modalVisible: false,
         };
     }
 
@@ -132,13 +134,15 @@ class CelestialDetail extends React.Component {
                                 <Text style={styles.whitetext}>{this.state.description}</Text>
                             </View>
                         </View>
+
+                        {/* AR Button */}
                         {this.state.arHidden ?
-                            null:
+                            null :
                             <TouchableOpacity
-                                style={styles.ar}
+                                style={styles.button}
                                 onPress={() => this.augmentedCelestial(this.props.navigation.state.params)}
                             >
-                                <Text style={styles.artext}>View in Augmented Reality</Text>
+                                <Text style={styles.buttonText}>View in Augmented Reality</Text>
                             </TouchableOpacity>
                         }
                     </View>
@@ -201,7 +205,7 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: '#0080FF'
     },
-    ar: {
+    button: {
         backgroundColor: '#0080FF',
         borderRadius: 8,
         width: 250,
@@ -210,7 +214,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         margin: 20,
     },
-    artext: {
+    buttonText: {
         color: '#FFF',
     }
 });

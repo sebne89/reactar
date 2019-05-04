@@ -10,7 +10,6 @@ import {
 
 import {data} from '../assets/data/dwarfplanet-data';
 import Celestial from "../components/Celestial";
-import LinearGradient from 'react-native-linear-gradient';
 
 class DwarfPlanetScreen extends React.Component {
 
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
     },
     item: {
         width: Dimensions.get('window').width - 30,
-        backgroundColor: '#594F4F',
+        backgroundColor: '#162C5C',
         borderRadius: 8,
         margin: 5,
     },

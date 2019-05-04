@@ -11,6 +11,8 @@ import PlanetScreen from './container/PlanetScreen';
 import MoonScreen from './container/MoonScreen';
 import DwarfPlanetScreen from './container/DwarfPlanetScreen';
 import CelestialDetail from "./components/CelestialDetail";
+import AugmentedView from "./components/AugmentedView";
+import APOD from './components/APOD';
 
 const PlanetStack = createStackNavigator({
     Planet: {
@@ -21,6 +23,9 @@ const PlanetStack = createStackNavigator({
     },
     CelestialDetail: {
         screen: CelestialDetail,
+    },
+    AugmentedView: {
+        screen: AugmentedView,
     }
 });
 
@@ -33,6 +38,9 @@ const MoonStack = createStackNavigator({
     },
     CelestialDetail: {
         screen: CelestialDetail,
+    },
+    AugmentedView: {
+        screen: AugmentedView,
     }
 });
 
@@ -45,6 +53,9 @@ const DwarfPlanetStack = createStackNavigator({
     },
     CelestialDetail: {
         screen: CelestialDetail,
+    },
+    AugmentedView: {
+        screen: AugmentedView,
     }
 });
 
@@ -68,6 +79,13 @@ const AppNavigator = createBottomTabNavigator({
             navigationOptions: {
                 title: 'Dwarfplanets',
                 tabBarIcon: <Icon name='md-globe'/>,
+            }
+        },
+        APOD: {
+            screen: APOD,
+            navigationOptions: {
+                title: 'APOD',
+                tabBarIcon: <Icon name='images'/>,
             }
         }
     },

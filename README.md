@@ -25,10 +25,22 @@ The following guidelines & demands had to be fullfilled:
 Make sure you have a package manager like [Yarn](https://yarnpkg.com/lang/en/) or [npm](https://www.npmjs.com) installed and at least [XCode](https://developer.apple.com/xcode/) 9 installed.
 The following stepts are tested with Yarn on Mac OS Mojave 10.14.4 with XCode Version 10.2.1. Consider switching to Yarn if npm causes problems.
 
-* Open your terminal and navigate to a preferred folder where you want to store the ReactAR project
-* git clone ...
-* cd reactar
-* yarn install
+Open your terminal and navigate to a preferred folder where you want to store the ReactAR project (...)
+
+Clone this repo:
+```
+git clone 
+```
+
+Change dir:
+```
+cd reactar
+```
+
+Install packages with yarn:
+```
+yarn install
+```
 
 Go to [NASA Open APIs](https://api.nasa.gov/index.html) and register yourself for an api key. 
 Enter your api key in 'components/APOD.js' on line 18. Save and Close 'APOD.js'.
@@ -41,27 +53,25 @@ your hardware. Android devices are not supported due to not implemented AR-bindi
 To preview the Augmented Reality, it's neccessary to run/build the application on the device by using XCode 9 or later. It's not possible to use the ARKit 
 within the iOS Simulator. 
 
-```
-Give examples
-```
+### Usage iOS Simulator
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+If you want to use the iOS Simulator and pass on the augmented reality view for some of the celestial objects navigate to the 'reactar' project folder in your 
+terminal and type: 
 
 ```
-Give the example
+react-native run-ios
 ```
 
-And repeat
+To run the application in the iOS Simulator. 
 
-```
-until finished
-```
+### Usage Mobile Device
 
-End with an example of getting some data out of the system or using it for a little demo
+If you want to use the application on your device make sure your device is connected to your Mac.
+
+* Open XCode
+* Change Signature (....)
+* Run Application
+* Wait & Unlock your mobile device
 
 
 ## Built With
@@ -74,10 +84,6 @@ End with an example of getting some data out of the system or using it for a lit
 * [NASA Open APIs](https://api.nasa.gov/index.html) - NASA Open APIs
 * [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/) - Human Interface Guidelines
 
-
-## Versioning
-
--
 
 ## Authors
 

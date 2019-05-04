@@ -29,15 +29,15 @@ Open your terminal and navigate to a preferred folder where you want to store th
 
 Clone this repo:
 ```
-git clone 
+git clone https://gitlab.hs-ruhrwest.de/ucseneum/reactar.git
 ```
 
-Change dir:
+Change to reactar dir:
 ```
 cd reactar
 ```
 
-Install packages with yarn:
+Install neccessary packages with yarn:
 ```
 yarn install
 ```
@@ -55,7 +55,7 @@ within the iOS Simulator.
 
 ### Usage iOS Simulator
 
-If you want to use the iOS Simulator and pass on the augmented reality view for some of the celestial objects navigate to the 'reactar' project folder in your 
+If you want to use the iOS Simulator and pass on the augmented reality view for some of the celestial objects, navigate to the 'reactar' project folder in your 
 terminal and type: 
 
 ```

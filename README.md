@@ -20,6 +20,31 @@ The following guidelines & demands had to be fullfilled:
 *  Releasing the project at gitlab / github
 *  Documentation of the project in gitlab / github
 
+## Screenshots
+
+<img
+		width="210"
+		alt="Capture 1"
+		src="preview/capture1.png">
+<img
+		width="210"
+		alt="Capture 2"
+		src="preview/capture2.png">
+<img
+		width="210"
+		alt="Capture 5"
+		src="preview/capture5.png">
+<img
+		width="210"
+		alt="Capture 4"
+		src="preview/capture4.png">
+<img
+		width="210"
+		alt="Capture 6"
+		src="preview/capture6.png">
+
+
+
 ## Getting Started
 
 Make sure you have a package manager like [Yarn](https://yarnpkg.com/lang/en/) or [npm](https://www.npmjs.com) installed and at least [XCode](https://developer.apple.com/xcode/) 9 installed.

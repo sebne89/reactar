@@ -1,19 +1,37 @@
 # ReactAR
 
 The project has been realised as part of the module 'Mobile Computing' by lecturer Michael Schellenbach. ReactAR offers information about planets, moons and dwarfplanets of 
-our solar system. In addition it offers the option to look at some celestial bodies in augmented reality. 
+our solar system. In addition it offers the option to look at some celestial bodies in augmented reality. The information are fetched from Wikipedia and contain a short description
+and the first paragraph from Wikipedia for the chosen celestial object.
+
+A further feature is called [APOD](https://apod.nasa.gov/apod/astropix.html) and offers the latest Astronomy Picture of the Day from [NASA](https://www.nasa.gov). Furthermore the last five apods
+are accessible in an image gallery.
+
+The following celestial objects contain an AR-View option:
+* All planets
+* Moon (Earth's moon)
+* Neptune (Dwarfplanet)
 
 The following guidelines & demands had to be fullfilled:
 *  Total effort: 50-60 hours
 *  Framework: React Native
 *  Additional Feature: Augmented Reality, Machine Learning or GPS etc.
-*  Additional Requirements: Usage of a database (MongoDB) and a webservice (NodeJS) to supply data to the application
+*  Additional Requirements: Usage of a database (MongoDB) and a webservice (NodeJS) to supply data to the application (or ReST API)
 *  Releasing the project at gitlab / github
 *  Documentation of the project in gitlab / github
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Make sure you have a package manager like [Yarn](https://yarnpkg.com/lang/en/) or [npm](https://www.npmjs.com) installed and at least [XCode](https://developer.apple.com/xcode/) 9 installed.
+The following stepts are tested with Yarn on Mac OS Mojave 10.14.4 with XCode Version 10.2.1. Consider switching to Yarn if npm causes problems.
+
+* Open your terminal and navigate to a preferred folder where you want to store the ReactAR project
+* git clone ...
+* cd reactar
+* yarn install
+
+Go to [NASA Open APIs](https://api.nasa.gov/index.html) and register yourself for an api key. 
+Enter your api key in 'components/APOD.js' on line 18. Save and Close 'APOD.js'.
 
 ### Prerequisites
 
@@ -51,7 +69,9 @@ End with an example of getting some data out of the system or using it for a lit
 * [React Native](https://facebook.github.io/react-native/docs/getting-started) - The core framework used
 * [React Native ARKit](https://github.com/react-native-ar/react-native-arkit) - React Native ARKit Binding for Apple's iOS ARKit
 * [React Navigation](https://reactnavigation.org/docs/en/getting-started.html) - Navigation Component
+* [MomentJS](http://momentjs.com) - Date Library
 * [Wikipedia ReST API](https://en.wikipedia.org/api/rest_v1/) - Wikipedia ReST API Documentation
+* [NASA Open APIs](https://api.nasa.gov/index.html) - NASA Open APIs
 * [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/) - Human Interface Guidelines
 
 

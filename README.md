@@ -95,7 +95,7 @@ terminal and type:
 ```
 react-native run-ios
 ```
-
+Building and starting the iOS Simulator might take some time.
 To run the application in the iOS Simulator. 
 
 ### Usage Mobile Device
@@ -105,6 +105,8 @@ If you want to use the application on your device make sure your device is conne
 * Open reactar in XCode (/reactar/ios/ReactAR.xcodeproj)
 * Change Signature and Bundle Identifier: Replace every digit in the Bundle Identifier with an own, random number, for more details, take a look at the following screenshot
 * Build & Run Application on your device
+* Building might take some time
+* You might need to trust the app on your device. Follow the instructions shown in XCode or on your device
 
 <img
 		width="1200"

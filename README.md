@@ -106,6 +106,11 @@ If you want to use the application on your device make sure your device is conne
 * Change Signature and Bundle Identifier: Replace every digit in the Bundle Identifier with an own, random number, for more details, take a look at the following screenshot
 * Build & Run Application on your device
 
+<img
+		width="1200"
+		alt="XCode Signing"
+		src="preview/xcode.png">
+
 
 ## Built With
 

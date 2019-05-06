@@ -102,10 +102,9 @@ To run the application in the iOS Simulator.
 
 If you want to use the application on your device make sure your device is connected to your Mac.
 
-* Open XCode
-* Change Signature (....)
-* Run Application
-* Wait & Unlock your mobile device
+* Open reactar in XCode (/reactar/ios/ReactAR.xcodeproj)
+* Change Signature and Bundle Identifier: Replace every digit in the Bundle Identifier with an own, random number, for more details, take a look at the following screenshot
+* Build & Run Application on your device
 
 
 ## Built With

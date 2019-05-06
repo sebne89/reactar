@@ -71,16 +71,21 @@ Install neccessary packages with yarn:
 yarn install
 ```
 
-Go to [NASA Open APIs](https://api.nasa.gov/index.html) and register yourself for an api key. 
-Enter your api key in 'components/APOD.js' on line 18. Save and Close 'APOD.js'.
-
 ### Prerequisites
 
-Apple's iOS ARKit is only supported by Apple devices with A9 or later processors on iOS 11. Make sure you have at least an iPhone SE or 6s to run the application on 
+Apple's **iOS ARKit is only supported by Apple devices with A9 or later processors** on iOS 11. Make sure you have at least an iPhone SE or 6s to run the application on 
 your hardware. Android devices are not supported due to not implemented AR-bindings.
 
-To preview the Augmented Reality, it's neccessary to run/build the application on the device by using XCode 9 or later. It's not possible to use the ARKit 
-within the iOS Simulator. 
+To preview the Augmented Reality, it's neccessary to run/build the application on the device by using XCode 9 or later. It's **not possible to use the ARKit 
+within the iOS Simulator**
+. 
+
+You need an own api key: [NASA Open APIs](https://api.nasa.gov/index.html). See **Installing** for more Details.
+
+### Installing
+
+Go to [NASA Open APIs](https://api.nasa.gov/index.html) and register yourself for an api key. 
+Enter your api key in 'components/APOD.js' on line 18. Save and Close 'APOD.js'.
 
 ### Usage iOS Simulator
 

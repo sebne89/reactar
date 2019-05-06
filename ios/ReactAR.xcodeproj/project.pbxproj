@@ -41,6 +41,7 @@
 		57F998CD182E401AA163A0C0 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E9EB4F23BC442E92FC3ED0 /* libRNGestureHandler-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8DEEBE7D27464A54851D2280 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3ABB0AB3364B4396A20FA5 /* libRNCAsyncStorage.a */; };
+		9E17A1E8227DDA790033D1C5 /* startscreen_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E17A1E7227DDA790033D1C5 /* startscreen_logo.png */; };
 		9E77770A22770F950026D439 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E77770922770F950026D439 /* art.scnassets */; };
 		9ED22AFF22646A8300A09146 /* libRCTARKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED22AF5226469D000A09146 /* libRCTARKit.a */; };
 		9ED22B0022646A8D00A09146 /* PocketSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED22AFC22646A0000A09146 /* PocketSVG.framework */; };
@@ -438,6 +439,7 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		84359533963C47F7A684CEFB /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		9E17A1E7227DDA790033D1C5 /* startscreen_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startscreen_logo.png; sourceTree = "<group>"; };
 		9E77770922770F950026D439 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ReactAR/art.scnassets; sourceTree = "<group>"; };
 		9ED22AF0226469D000A09146 /* RCTARKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTARKit.xcodeproj; path = "../node_modules/react-native-arkit/ios/RCTARKit.xcodeproj"; sourceTree = "<group>"; };
 		9ED22AF622646A0000A09146 /* PocketSVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PocketSVG.xcodeproj; path = "../node_modules/react-native-arkit/ios/PocketSVG/PocketSVG.xcodeproj"; sourceTree = "<group>"; };
@@ -592,6 +594,7 @@
 		13B07FAE1A68108700A75B9A /* ReactAR */ = {
 			isa = PBXGroup;
 			children = (
+				9E17A1E7227DDA790033D1C5 /* startscreen_logo.png */,
 				9E77770922770F950026D439 /* art.scnassets */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -1314,6 +1317,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				9E77770A22770F950026D439 /* art.scnassets in Resources */,
+				9E17A1E8227DDA790033D1C5 /* startscreen_logo.png in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				0FC4E92C2DCB4551A474F512 /* Ionicons.ttf in Resources */,
 			);

@@ -80,7 +80,7 @@ To preview the Augmented Reality, it's neccessary to run/build the application o
 within the iOS Simulator**
 . 
 
-You need an own api key: [NASA Open APIs](https://api.nasa.gov/index.html). See **Installing** for more Details.
+You need an own api key: [NASA Open APIs](https://api.nasa.gov/index.html). Take a look at **Installing** to learn more about how to use & implement the api key.
 
 ### Installing
 

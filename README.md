@@ -54,7 +54,7 @@ The following guidelines & demands had to be fullfilled:
 Make sure you have a package manager like [Yarn](https://yarnpkg.com/lang/en/) or [npm](https://www.npmjs.com) installed and at least [XCode](https://developer.apple.com/xcode/) 9 installed.
 The following stepts are tested with Yarn on Mac OS Mojave 10.14.4 with XCode Version 10.2.1. Consider switching to Yarn if npm causes problems.
 
-Open your terminal and navigate to a preferred folder where you want to store the ReactAR project (...)
+Open your terminal and navigate to a preferred folder where you want to store the ReactAR project (for example: ~/Documents)
 
 Clone this repo:
 ```
@@ -89,7 +89,7 @@ Enter your api key in 'components/APOD.js' on line 18. Save and Close 'APOD.js'.
 
 ### Usage iOS Simulator
 
-If you want to use the iOS Simulator and pass on the augmented reality view for some of the celestial objects, navigate to the 'reactar' project folder in your 
+If you want to use the iOS Simulator and pass on the augmented reality view, navigate to the 'reactar' project folder in your 
 terminal and type: 
 
 ```

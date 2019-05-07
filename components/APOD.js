@@ -147,33 +147,33 @@ class APOD extends React.Component {
                                     <ScrollView>
                                         {this.state.apods.map(item => (
                                             <View
-                                                key={item}
+                                                key={item.date}
                                                 style={styles.galleryElement}>
                                                 <Image
-                                                    key={item}
                                                     source={{uri: item.url}}
                                                     resizeMode='cover'
                                                     style={styles.img}
                                                 />
                                                 <View style={styles.titleBg}>
-                                                    <Text key={item} style={styles.whitetext}>{item.title}</Text>
+                                                    <Text style={styles.whitetext}>{item.title}</Text>
                                                 </View>
 
-                                                {/* Textblock (Additional Information and Explanation) for each APOD */}
+
+                                                {/*Textblock (Additional Information and Explanation) for each APOD*/}
 
                                                 <View style={styles.informationBlock}>
                                                     <View style={styles.additionalInformationBg}>
-                                                        <Text key={item}
-                                                              style={styles.whitetext}>Copyright: {item.copyright}</Text>
-                                                        <Text key={item}
-                                                              style={styles.whitetext}>Date: {item.date}</Text>
+                                                        <Text
+                                                            style={styles.whitetext}>Copyright: {item.copyright}</Text>
+                                                        <Text style={styles.whitetext}>Date: {item.date}</Text>
                                                     </View>
+
                                                     <View style={styles.explanationBg}>
                                                         <Text style={styles.whitetext}>Explanation: </Text>
-                                                        <Text key={item}
-                                                              style={styles.whitetext}>{item.explanation}</Text>
+                                                        <Text style={styles.whitetext}>{item.explanation}</Text>
                                                     </View>
                                                 </View>
+
                                             </View>
                                         ))}
                                         <View style={{alignItems: 'center'}}>
@@ -208,9 +208,10 @@ class APOD extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: 'center',
+        flex: 1,
     },
     isLoading: {
+        marginTop: 200,
         alignItems: 'center',
     },
     waitingText: {

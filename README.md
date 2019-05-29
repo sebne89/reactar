@@ -85,7 +85,7 @@ You need an own api key: [NASA Open APIs](https://api.nasa.gov/index.html). Take
 ### Installing
 
 Go to [NASA Open APIs](https://api.nasa.gov/index.html) and register yourself for an api key. 
-Enter your api key in 'components/APOD.js' on line 18. Save and Close 'APOD.js'.
+Enter your api key in './env/api_key.js' on line 1. Save and Close 'api_key.js'.
 
 ### Usage iOS Simulator
 

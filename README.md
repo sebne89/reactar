@@ -119,6 +119,7 @@ If you want to use the application on your device make sure your device is conne
 * [React Native](https://facebook.github.io/react-native/docs/getting-started) - The core framework used
 * [React Native ARKit](https://github.com/react-native-ar/react-native-arkit) - React Native ARKit Binding for Apple's iOS ARKit
 * [React Navigation](https://reactnavigation.org/docs/en/getting-started.html) - Navigation Component
+* [React Redux](https://react-redux.js.org) - State Storage
 * [MomentJS](http://momentjs.com) - Date Library
 * [Wikipedia ReST API](https://en.wikipedia.org/api/rest_v1/) - Wikipedia ReST API Documentation
 * [NASA Open APIs](https://api.nasa.gov/index.html) - NASA Open APIs

@@ -85,7 +85,7 @@ You need an own api key: [NASA Open APIs](https://api.nasa.gov/index.html). Take
 ### Installing
 
 Go to [NASA Open APIs](https://api.nasa.gov/index.html) and register yourself for an api key. 
-Enter your api key in './env/apikey.js' on line 1. Save and Close 'apikey.js'.
+Enter your api key in './env/api_key.js' on line 1. Save and Close 'api_key.js'.
 
 ### Usage iOS Simulator
 
@@ -96,7 +96,7 @@ terminal and type:
 react-native run-ios
 ```
 Building and starting the iOS Simulator might take some time.
-To run the application in the iOS Simulator. 
+
 
 ### Usage Mobile Device
 

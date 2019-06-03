@@ -1,4 +1,4 @@
-import {FETCHING_WIKI_DATA, FETCHING_WIKI_DATA_SUCCESS, FETCHING_WIKI_DATA_FAILURE} from "../constants/wiki_constants";
+import {FETCHING_MOON_DATA, FETCHING_MOON_DATA_SUCCESS, FETCHING_MOON_DATA_FAILURE} from "../constants/moon_constants";
 
 const initialState = {
     data: [],
@@ -7,21 +7,21 @@ const initialState = {
     error: false
 };
 
-export default function wikiReducer(state = initialState, action) {
+export default function moonReducer(state = initialState, action) {
     switch (action.type) {
-        case FETCHING_WIKI_DATA:
+        case FETCHING_MOON_DATA:
             return {
                 ...state,
                 data: [],
                 isFetching: true
             };
-        case FETCHING_WIKI_DATA_SUCCESS:
+        case FETCHING_MOON_DATA_SUCCESS:
             return {
                 ...state,
                 isFetching: false,
                 data: action.data
             };
-        case FETCHING_WIKI_DATA_FAILURE:
+        case FETCHING_MOON_DATA_FAILURE:
             return {
                 ...state,
                 isFetching: false,

@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import {
     StyleSheet,
     ScrollView,
@@ -8,10 +9,15 @@ import {
     FlatList, Dimensions
 } from 'react-native';
 
+import {fetchData} from "../redux/action/moon_action";
 import {data} from '../assets/data/moon-data';
 import Celestial from "../components/Celestial";
 
 class MoonScreen extends React.Component {
+
+    componentDidMount() {
+        this.props.fetchData();
+    }
 
     showCelestialDetail = (item) => {
         this.props.navigation.navigate('CelestialDetail', item);
@@ -25,14 +31,14 @@ class MoonScreen extends React.Component {
                         data={data}
                         renderItem={({item}) =>
                             /*<LinearGradient style={styles.linearGradient} colors={['#5AC8FF', '#0080FF']}>*/
-                                <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
-                                    <Celestial
-                                        image={item.image}
-                                        name={item.name}
-                                        type={item.type}
-                                        shortDescription={item.shortDescription}
-                                    />
-                                </TouchableOpacity>
+                            <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
+                                <Celestial
+                                    image={item.image}
+                                    name={item.name}
+                                    type={item.type}
+                                    shortDescription={item.shortDescription}
+                                />
+                            </TouchableOpacity>
                             /*</LinearGradient>*/
                         }
                         keyExtractor={(item, index) => item.id.toString()}
@@ -40,6 +46,18 @@ class MoonScreen extends React.Component {
                 </View>
             </ScrollView>
         )
+    }
+}
+
+function mapStateToProps(state) {
+    return {
+        moonData: state.moonData
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        fetchData: () => dispatch(fetchData())
     }
 }
 
@@ -75,4 +93,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default MoonScreen;
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(MoonScreen);

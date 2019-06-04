@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux'
 import {
     StyleSheet,
     ScrollView,
@@ -9,10 +10,15 @@ import {
     FlatList,
 } from 'react-native';
 
+import {fetchData} from "../redux/action/planet_action";
 import {data} from '../assets/data/planet-data';
 import Celestial from "../components/Celestial";
 
 class PlanetScreen extends React.Component {
+
+    componentDidMount() {
+        this.props.fetchData();
+    }
 
     showCelestialDetail = (item) => {
         this.props.navigation.navigate('CelestialDetail', item);
@@ -25,20 +31,32 @@ class PlanetScreen extends React.Component {
                     <FlatList
                         data={data}
                         renderItem={({item}) =>
-                                <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
-                                    <Celestial
-                                        image={item.image}
-                                        name={item.name}
-                                        type={item.type}
-                                        shortDescription={item.shortDescription}
-                                    />
-                                </TouchableOpacity>
+                            <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
+                                <Celestial
+                                    image={item.image}
+                                    name={item.name}
+                                    type={item.type}
+                                    shortDescription={item.shortDescription}
+                                />
+                            </TouchableOpacity>
                         }
                         keyExtractor={(item, index) => item.id.toString()}
                     />
                 </View>
             </ScrollView>
         )
+    }
+}
+
+function mapStateToProps(state) {
+    return {
+        planetData: state.planetData
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        fetchData: () => dispatch(fetchData())
     }
 }
 
@@ -73,4 +91,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default PlanetScreen;
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(PlanetScreen);

@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import {
     StyleSheet,
     ScrollView,
@@ -8,10 +9,15 @@ import {
     FlatList, Dimensions
 } from 'react-native';
 
+import {fetchData} from '../redux/action/dwarfplanet_action';
 import {data} from '../assets/data/dwarfplanet-data';
 import Celestial from "../components/Celestial";
 
 class DwarfPlanetScreen extends React.Component {
+
+    componentDidMount() {
+        this.props.fetchData();
+    }
 
     showCelestialDetail = (item) => {
         this.props.navigation.navigate('CelestialDetail', item);
@@ -25,15 +31,15 @@ class DwarfPlanetScreen extends React.Component {
                         data={data}
                         renderItem={({item}) =>
                             /*<LinearGradient style={styles.linearGradient} colors={['#5AC8FF', '#0080FF']}>*/
-                                <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
+                            <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
 
-                                    <Celestial
-                                        image={item.image}
-                                        name={item.name}
-                                        type={item.type}
-                                        shortDescription={item.shortDescription}
-                                    />
-                                </TouchableOpacity>
+                                <Celestial
+                                    image={item.image}
+                                    name={item.name}
+                                    type={item.type}
+                                    shortDescription={item.shortDescription}
+                                />
+                            </TouchableOpacity>
                             /*</LinearGradient>*/
                         }
                         keyExtractor={(item, index) => item.id.toString()}
@@ -41,6 +47,18 @@ class DwarfPlanetScreen extends React.Component {
                 </View>
             </ScrollView>
         )
+    }
+}
+
+function mapStateToProps(state) {
+    return {
+        dwarfplanetData: state.dwarfplanetData
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        fetchData: () => dispatch(fetchData())
     }
 }
 
@@ -74,6 +92,22 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
     },
+    button: {
+        backgroundColor: '#0080FF',
+        borderRadius: 8,
+        width: 250,
+        height: 40,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 15,
+        marginBottom: 22,
+    },
+    buttonText: {
+        color: '#FFF',
+    },
 });
 
-export default DwarfPlanetScreen;
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(DwarfPlanetScreen);

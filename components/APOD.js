@@ -20,7 +20,6 @@ const api_key = 'IiPKYeVOFHuZawnmeheiDQJ7bsBh02rMrhnoGhMy';
 
 class APOD extends React.Component {
 
-
     constructor(props) {
         super(props);
 

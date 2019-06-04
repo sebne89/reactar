@@ -1,14 +1,14 @@
 import {celestialData} from '../../assets/data/celestialData';
 
 const wikiEndpoint = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
-let data = [];
 
 export function fetchWikipedia(cType) {
+
+    let data = [];
 
     for (let i = 0; i < celestialData.length; i++) {
 
         if (celestialData[i].cType === cType) {
-            console.log(celestialData[i].cType + " " + cType);
             let name = celestialData[i].name;
             let type = celestialData[i].type;
 
@@ -23,7 +23,7 @@ export function fetchWikipedia(cType) {
 
                     if (typeof description === "undefined" || typeof extract === "undefined" || description.includes('Disambiguation')) {
 
-                        reFetch(name, type);
+                        reFetch(name, type, data);
 
                     } else {
 
@@ -34,7 +34,7 @@ export function fetchWikipedia(cType) {
                             description: extract
                         });
 
-                        console.log(data);
+                        /*console.log(data);*/
                     }
                 })
                 .catch((error) => {
@@ -45,7 +45,7 @@ export function fetchWikipedia(cType) {
     return Promise.all(data);
 }
 
-function reFetch(name, cType) {
+function reFetch(name, cType, data) {
 
     let uri = wikiEndpoint + name + '?redirect=true';
 

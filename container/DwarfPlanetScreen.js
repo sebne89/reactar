@@ -6,11 +6,10 @@ import {
     Text,
     TouchableOpacity,
     View,
-    FlatList, Dimensions
+    FlatList, Dimensions, ActivityIndicator
 } from 'react-native';
 
 import {fetchData} from '../redux/action/dwarfplanet_action';
-import {data} from '../assets/data/dwarfplanet-data';
 import Celestial from "../components/Celestial";
 
 class DwarfPlanetScreen extends React.Component {
@@ -28,7 +27,7 @@ class DwarfPlanetScreen extends React.Component {
             <ScrollView>
                 <View style={styles.container}>
                     <FlatList
-                        data={this.props.dwarfplanetData}
+                        data={this.props.dwarfplanetData.data}
                         renderItem={({item, index}) =>
                             <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
 
@@ -51,7 +50,7 @@ class DwarfPlanetScreen extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        dwarfplanetData: state.dwarfplanetData.data
+        dwarfplanetData: state.dwarfplanetData
     }
 }
 

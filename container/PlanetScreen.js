@@ -29,7 +29,7 @@ class PlanetScreen extends React.Component {
             <ScrollView>
                 <View style={styles.container}>
                     <FlatList
-                        data={this.props.planetData}
+                        data={this.props.planetData.data}
                         renderItem={({item}) =>
                             <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
                                 <Celestial
@@ -50,7 +50,7 @@ class PlanetScreen extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        planetData: state.planetData.data
+        planetData: state.planetData
     }
 }
 

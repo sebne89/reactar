@@ -60,5 +60,7 @@ function fetchPreviousAPOD() {
                 })
         )
     }
+
+    console.log(data);
     return Promise.all(data);
 }

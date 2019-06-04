@@ -8,7 +8,7 @@ export function fetchWikipedia(cType) {
     for (let i = 0; i < celestialData.length; i++) {
 
         if (celestialData[i].cType === cType) {
-
+            console.log(celestialData[i].cType + " " + cType);
             let name = celestialData[i].name;
             let type = celestialData[i].type;
 
@@ -27,12 +27,14 @@ export function fetchWikipedia(cType) {
 
                     } else {
 
-                        data.push(JSON.stringify({
+                        data.push({
                             name: name,
-                            type: type,
+                            type: cType,
                             shortDescription: description,
                             description: extract
-                        }));
+                        });
+
+                        console.log(data);
                     }
                 })
                 .catch((error) => {
@@ -43,7 +45,7 @@ export function fetchWikipedia(cType) {
     return Promise.all(data);
 }
 
-function reFetch(name, type) {
+function reFetch(name, cType) {
 
     let uri = wikiEndpoint + name + '?redirect=true';
 
@@ -54,11 +56,11 @@ function reFetch(name, type) {
             let description = responseJson.description;
             let extract = responseJson.extract;
 
-            data.push(JSON.stringify({
+            data.push({
                 name: name,
-                type: type,
+                type: cType,
                 shortDescription: description,
                 description: extract
-            }));
+            });
         }))
 }

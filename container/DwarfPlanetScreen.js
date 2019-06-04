@@ -28,9 +28,8 @@ class DwarfPlanetScreen extends React.Component {
             <ScrollView>
                 <View style={styles.container}>
                     <FlatList
-                        data={data}
-                        renderItem={({item}) =>
-                            /*<LinearGradient style={styles.linearGradient} colors={['#5AC8FF', '#0080FF']}>*/
+                        data={this.props.dwarfplanetData}
+                        renderItem={({item, index}) =>
                             <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
 
                                 <Celestial
@@ -40,9 +39,9 @@ class DwarfPlanetScreen extends React.Component {
                                     shortDescription={item.shortDescription}
                                 />
                             </TouchableOpacity>
-                            /*</LinearGradient>*/
+
                         }
-                        keyExtractor={(item, index) => item.id.toString()}
+                        keyExtractor={(item, index) => item.name}
                     />
                 </View>
             </ScrollView>
@@ -52,7 +51,7 @@ class DwarfPlanetScreen extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        dwarfplanetData: state.dwarfplanetData
+        dwarfplanetData: state.dwarfplanetData.data
     }
 }
 

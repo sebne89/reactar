@@ -28,7 +28,7 @@ class MoonScreen extends React.Component {
             <ScrollView>
                 <View style={styles.container}>
                     <FlatList
-                        data={data}
+                        data={this.props.moonData}
                         renderItem={({item}) =>
                             /*<LinearGradient style={styles.linearGradient} colors={['#5AC8FF', '#0080FF']}>*/
                             <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
@@ -41,7 +41,7 @@ class MoonScreen extends React.Component {
                             </TouchableOpacity>
                             /*</LinearGradient>*/
                         }
-                        keyExtractor={(item, index) => item.id.toString()}
+                        keyExtractor={(item, index) => item.name}
                     />
                 </View>
             </ScrollView>
@@ -51,7 +51,7 @@ class MoonScreen extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        moonData: state.moonData
+        moonData: state.moonData.data
     }
 }
 

@@ -15,11 +15,10 @@ import {
 import { connect } from 'react-redux'
 import { fetchData } from '../redux/action/nasa_action';
 
+import api_key from '../env/api_key';
 const uri = 'https://api.nasa.gov/planetary/apod?api_key=';
-const api_key = 'IiPKYeVOFHuZawnmeheiDQJ7bsBh02rMrhnoGhMy';
 
 class APOD extends React.Component {
-
 
     constructor(props) {
         super(props);

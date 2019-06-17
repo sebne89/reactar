@@ -7,7 +7,6 @@ import {
     View,
     Dimensions,
     TouchableOpacity,
-    Modal
 } from 'react-native';
 
 class CelestialDetail extends React.Component {
@@ -90,11 +89,11 @@ class CelestialDetail extends React.Component {
                 let description = responseJson.description;
                 let extract = responseJson.extract;
 
-                console.log(extract);
-                console.log(description);
+                console.log("Extract for: " + name + " : " + extract);
+                console.log("Description for: " + name + " : " + description);
 
                 if (typeof description === "undefined" || typeof extract === "undefined" || description.includes('Disambiguation')) {
-                    console.log('Page not found. Retrying query with another URI, without type of the celestial object as parameter.');
+                    console.log('Page not found. Retrying Wikipedia query with another URI, without type of the celestial object as parameter.');
                     this.refetchCelestial(name);
                 } else {
                     this.setState({
@@ -111,10 +110,9 @@ class CelestialDetail extends React.Component {
 
     render() {
 
-        const {id, type, name, image, description} = this.props.navigation.state.params;
-        const shortDescription = this.props.navigation.state.params.shortDescription;
+        const {type, image} = this.props.navigation.state.params;
 
-        console.log(this.props.navigation.state.params.arObject);
+        console.log("AR Object File: " + this.props.navigation.state.params.arObject);
 
         return (
             <View style={styles.container}>

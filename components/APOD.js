@@ -11,13 +11,14 @@ import {
     Modal,
     StatusBar,
 } from 'react-native';
-import moment from "moment";
 
+import { connect } from 'react-redux'
+import { fetchData } from '../redux/action/nasa_action';
+
+import api_key from '../env/api_key';
 const uri = 'https://api.nasa.gov/planetary/apod?api_key=';
-const api_key = 'IiPKYeVOFHuZawnmeheiDQJ7bsBh02rMrhnoGhMy';
 
 class APOD extends React.Component {
-
 
     constructor(props) {
         super(props);
@@ -30,13 +31,11 @@ class APOD extends React.Component {
             title: '',
             isLoading: true,
             modalVisible: false,
-            apods: [],
         }
     }
 
     componentDidMount() {
         this.fetchAPOD();
-        this.fetchPreviousAPOD();
     }
 
     setModalVisible(visible) {
@@ -69,33 +68,6 @@ class APOD extends React.Component {
             .catch((error) => {
                 console.log(error)
             })
-    }
-
-    fetchPreviousAPOD() {
-
-        const uri_date = '&date=';
-
-        const toFetch = 5;
-
-        let date = moment();
-
-        for (let i = toFetch; i > 0; i--) {
-
-            date = date.subtract(1, "days");
-            let _tmpDate = date.format("YYYY-MM-DD");
-
-            fetch(uri + api_key + uri_date + _tmpDate)
-                .then((response) => response.json())
-                .then((responseJson) => {
-                    console.log(responseJson);
-                    this.setState({
-                        apods: [...this.state.apods, responseJson],
-                    })
-                })
-                .catch((error) => {
-                    console.log(error);
-                })
-        }
     }
 
     render() {
@@ -145,7 +117,7 @@ class APOD extends React.Component {
                                 <View style={styles.modal}>
                                     {/* Image Gallery */}
                                     <ScrollView>
-                                        {this.state.apods.map(item => (
+                                        {this.props.nasaData.data.map(item => (
                                             <View
                                                 key={item.date}
                                                 style={styles.galleryElement}>
@@ -193,7 +165,8 @@ class APOD extends React.Component {
                             <TouchableOpacity
                                 style={styles.button}
                                 onPress={() => {
-                                    this.setModalVisible(true)
+                                    this.setModalVisible(true);
+                                    this.props.fetchData();
                                 }}
                             >
                                 <Text style={styles.buttonText}>Show the five latest APODs</Text>
@@ -206,13 +179,26 @@ class APOD extends React.Component {
     }
 }
 
+function mapStateToProps (state) {
+    return {
+        nasaData: state.nasaData
+    }
+}
+
+function mapDispatchToProps (dispatch) {
+    return {
+        fetchData: () => dispatch(fetchData())
+    }
+}
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
     isLoading: {
-        marginTop: 200,
+        marginTop: Dimensions.get('window').height / 2.5,
         alignItems: 'center',
+        justifyContent: 'center',
     },
     waitingText: {
         marginTop: 22,
@@ -274,4 +260,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default APOD;
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(APOD);

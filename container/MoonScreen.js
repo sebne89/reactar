@@ -2,7 +2,6 @@ import React from 'react';
 import {
     StyleSheet,
     ScrollView,
-    Text,
     TouchableOpacity,
     View,
     FlatList, Dimensions
@@ -24,7 +23,6 @@ class MoonScreen extends React.Component {
                     <FlatList
                         data={data}
                         renderItem={({item}) =>
-                            /*<LinearGradient style={styles.linearGradient} colors={['#5AC8FF', '#0080FF']}>*/
                                 <TouchableOpacity style={styles.item} onPress={() => this.showCelestialDetail(item)}>
                                     <Celestial
                                         image={item.image}
@@ -33,7 +31,6 @@ class MoonScreen extends React.Component {
                                         shortDescription={item.shortDescription}
                                     />
                                 </TouchableOpacity>
-                            /*</LinearGradient>*/
                         }
                         keyExtractor={(item, index) => item.id.toString()}
                     />
@@ -61,12 +58,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#3F5075',
         borderRadius: 8,
         margin: 5,
-    },
-    linearGradient: {
-        width: Dimensions.get('window').width - 30,
-        margin: 5,
-        borderRadius: 10,
-
     },
     title: {
         paddingBottom: 10,

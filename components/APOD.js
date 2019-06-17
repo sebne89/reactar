@@ -196,8 +196,9 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     isLoading: {
-        marginTop: 200,
+        marginTop: Dimensions.get('window').height / 2.5,
         alignItems: 'center',
+        justifyContent: 'center',
     },
     waitingText: {
         marginTop: 22,

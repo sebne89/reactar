@@ -91,6 +91,8 @@ You need an own api key: [NASA Open APIs](https://api.nasa.gov/index.html). Take
 Go to [NASA Open APIs](https://api.nasa.gov/index.html) and register yourself for an api key. 
 Enter your api key in './env/api_key.js' on line 1. Save and Close 'api_key.js'.
 
+## Deployment
+
 ### Usage iOS Simulator
 
 If you want to use the iOS Simulator and pass on the augmented reality view, navigate to the 'reactar' project folder in your 

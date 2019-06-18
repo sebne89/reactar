@@ -58,13 +58,15 @@ The following guidelines & demands had to be fullfilled to pass the course 'Mobi
 Make sure you have a package manager like [Yarn](https://yarnpkg.com/lang/en/) or [npm](https://www.npmjs.com) installed and at least [XCode](https://developer.apple.com/xcode/) 9 installed.
 The following stepts are tested with Yarn on Mac OS Mojave 10.14.4 with XCode Version 10.2.1. Consider switching to Yarn if npm causes problems.
 
+
 ### Prerequisites
 
 Apple's **iOS ARKit is only supported by Apple devices with A9 or later processors** on iOS 11. Make sure you have at least an iPhone SE or 6s to run the application on 
 your hardware. Android devices are not supported due to not implemented AR-bindings.
 
 To preview the Augmented Reality, it's neccessary to run/build the application on the device by using XCode 9 or later. It's **not possible to use the ARKit 
-within the iOS Simulator**
+within the iOS Simulator**.
+
 
 ### Installing
 
@@ -84,6 +86,7 @@ Install neccessary packages with yarn:
 ```
 yarn install
 ```
+
 
 ### Setting up the (NASA) API Key
 
@@ -138,3 +141,8 @@ If you want to use the application on your device make sure your device is conne
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+Michael Schellenbach
+Jeanette Stürz

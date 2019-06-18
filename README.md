@@ -1,5 +1,7 @@
 # ReactAR
 
+## Introduction
+
 ReactAR offers information about planets, moons and dwarfplanets of 
 our solar system. In addition it offers the option to look at some celestial bodies in augmented reality. The information are fetched from Wikipedia and contain a short description
 and the first paragraph from Wikipedia for the chosen celestial object.
@@ -14,7 +16,7 @@ The following celestial objects contain an AR-View option:
 
 The project has been realised as part of the course 'Mobile Computing' by lecturer Michael Schellenbach. 
 
-## Module Requirements
+### Module Requirements
 
 The following guidelines & demands had to be fullfilled to pass the course 'Mobile Computing':
 *  Total effort: 50-60 hours

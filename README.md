@@ -1,7 +1,5 @@
 # ReactAR
 
-## Introduction
-
 ReactAR offers information about planets, moons and dwarfplanets of 
 our solar system. In addition it offers the option to look at some celestial bodies in augmented reality. The information are fetched from Wikipedia and contain a short description
 and the first paragraph from Wikipedia for the chosen celestial object.

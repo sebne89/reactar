@@ -99,7 +99,7 @@ terminal and type:
 ```
 react-native run-ios
 ```
-Building and starting the iOS Simulator might take some time.
+Building and starting the iOS Simulator might take some time. Keep in mind that you can't use the AR capability within the iOS Simulator. 
 
 
 ### Usage Mobile Device
